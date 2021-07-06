@@ -31,7 +31,3 @@ class OSMnx:
             str(self.size) + "x" + str(self.size) + self.extension
         cv2.imwrite(f_out_name, img)
         return f_out_name
-
-
-if __name__ == "__main__":
-    print(OSMnx().save())

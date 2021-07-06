@@ -8,10 +8,8 @@ https://gist.github.com/e5eafc276a4e54f516ed5559df4242c0.git
 from __future__ import annotations
 
 import sys
-
 import numpy as np
 import scipy
-
 import cv2
 
 
@@ -20,7 +18,6 @@ class fractal_dimension:
     def __init__(self, file_in, file_out):
         # Initialize with out of range value
         self.fractal_dim = -1.0
-
         self._f_in = file_in
         self.f_out = file_out
 
@@ -97,11 +94,3 @@ class fractal_dimension:
                       + "," + str(self.fractal_dim), file=f)
             # output binarrized image
             # imageio.imwrite("./result/f_out.jpg", im)
-
-
-if __name__ == '__main__':
-    d = fractal_dimension("./images/syeru.png",
-                          "./result/fractalDim.csv")
-    d.run()
-    d.output()
-    print("Minkowski-Bouligand dimention (computed): ", d.get_dim())
